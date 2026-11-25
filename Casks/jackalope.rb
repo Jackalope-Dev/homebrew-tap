@@ -4,14 +4,12 @@ cask "jackalope" do
   version :latest
   sha256 :no_check
 
-  url "https://cdn.crabnebula.app/download/jackalope-digital/jackalope/latest/platform/dmg-#{arch}?channel=stable",
-      verified: "cdn.crabnebula.app/download/jackalope-digital/jackalope/"
+  url "https://cdn.crabnebula.app/download/jackalope-digital/jackalope/latest/platform/dmg-#{arch}?channel=stable"
   name "Jackalope"
   desc "Desktop workspace for running coding agents side by side in Git worktrees"
   homepage "https://jackalope.dev/"
 
-  auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on :macos
 
   app "Jackalope.app"
   binary "#{appdir}/Jackalope.app/Contents/MacOS/jackalope"
